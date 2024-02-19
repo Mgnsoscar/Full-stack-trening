@@ -1,0 +1,9 @@
+{
+    "name": "Node Container",
+    "dockerComposeFile": ["../../docker-compose.yml"],
+    "service": "node",
+    "shutdownAction": "none",
+    "workspaceFolder": "/app",
+    "forwardPorts": [3000],
+    "overrideCommand": false
+  }

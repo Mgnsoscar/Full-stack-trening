@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  python:
+    build: 
+      context: .
+      dockerfile: ./.devcontainer/python-container/Dockerfile
+    volumes:
+      - ../..:/workspaces:cached     
+    ports:
+      - "8000:8000"
+    
+
+  node:
+    build: 
+      context: .
+      dockerfile: ./.devcontainer/node-container/Dockerfile
+
+    volumes:
+      - ../..:/workspaces:cached  
+
+    ports:
+      - "3000:3000"
+
