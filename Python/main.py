@@ -86,4 +86,4 @@ async def søk_emnekode(emnekode: str, db: db_dependency):
     if len(forespørsel) == 0:
         raise HTTPException(status_code=404, detail=f"Emne {emnekode} ikke funnet.")
     
-    return forespørsel
+    return forespørsel[0]
